@@ -1,0 +1,56 @@
+<html xmlns:th="http://www.thymeleaf.org">
+  <head>
+  	 <meta content="text/html;charset=UTF-8"/>
+  	 <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+     <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link th:href="@{bootstrap/css/bootstrap.min.css}" rel="stylesheet"/>
+    <link th:href="@{bootstrap/css/bootstrap-theme.min.css}" rel="stylesheet"/>
+  </head>
+  <body>
+  <div class="container">
+      <div class="row clearfix">
+          <div class="col-md-2 column"></div>
+          <div class="col-md-8 column panel panel-primary">
+              <div class="panel-heading">
+                  <h3 class="panel-title text-center">问答平台登录</h3>
+              </div>
+              <div class="panel-body">
+                  <div class="col-md-6 column">
+                      <form role="form">
+                          <div class="form-group">
+                              <label for="uuserName">用户名</label><input type="text" class="form-control" id="uuserName" placeholder="用户名" />
+                          </div>
+                          <div class="form-group">
+                              <label for="upassword">密码</label><input type="password" class="form-control" id="upassword" placeholder="密码" />
+                          </div>
+                          <div class="checkbox">
+                              <label><input type="checkbox" />保存登录状态</label>
+                          </div>
+                      </form>
+                      <button type="button" class="btn btn-link">注册</button><button type="button" class="btn btn-primary">登录</button>
+                  </div>
+                  <div class="col-md-6 column">请输入您的用户名密码，或点击注册按钮注册使用系统</div>
+              </div>
+          </div>
+
+
+      </div>
+  </div>
+
+
+
+  
+  <script th:src="@{jquery-1.10.2.min.js}" type="text/javascript"></script><!-- 2 -->
+  <script th:src="@{bootstrap/js/bootstrap.min.js}"></script><!-- 2 -->
+  
+  <script th:inline="javascript">
+  	var single = [[${singlePerson}]];
+  	console.log(single.name+"/"+single.age)
+  	
+  	function getName(name){
+  		console.log(name);
+  	}
+  </script>
+  
+  </body>
+ </html>
